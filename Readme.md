@@ -1,7 +1,4 @@
-# H1
-RABBITMQ on Docker
-
-
+# RABBITMQ on Docker
 Before use this docker
 add a file secrets.env in a secrets directory
 
