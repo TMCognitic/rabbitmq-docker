@@ -5,7 +5,7 @@ networks:
 services:
   # https://zgadzaj.com/development/docker/docker-compose/containers/rabbitmq
   rabbitmq:
-    build: ./rabbitmq
+    image: rabbitmq:3.13.2-management-alpine
     container_name: rabbitmq-service
     env_file:
       - path : .env
