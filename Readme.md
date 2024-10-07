@@ -7,7 +7,8 @@ add a file secrets.env in a secrets directory
 
 with this structure :
 
-`code`
+```bash
 #Admin Configuration
 RABBITMQ_DEFAULT_USER=YourAdminName
 RABBITMQ_DEFAULT_PASS=YourAdminPassword
+```
