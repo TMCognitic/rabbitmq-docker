@@ -1,0 +1,21 @@
+name: "rabbitmq"
+
+networks:
+  service-network:
+services:
+  # https://zgadzaj.com/development/docker/docker-compose/containers/rabbitmq
+  rabbitmq:
+    build: ./rabbitmq
+    container_name: rabbitmq-service
+    env_file:
+      - path : .env
+        required: true
+      - path : ./secrets/.secrets
+        required: true
+    # volumes:
+    #   - ./data/:/var/lib/rabbitmq/ #décommenter pour assurer la persistance
+    ports:
+      - 5672:5672
+      - $LOCAL_PORT:15672
+    networks:
+      - service-network
